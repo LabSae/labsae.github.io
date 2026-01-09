@@ -7,23 +7,96 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>LabSae</h1>
+  <header class="site-header">
+    <div class="header-left">
+      <img src="images/LabSae-Logo.png" alt="LabSae logo" class="logo-main">
+  
+      <div class="backed-by">
+        <span>backed by</span>
+          <a href="https://www.inria.fr" target="_blank" rel="noopener noreferrer">
+            <img src="images/Logo-Inria-rouge.png" alt="Inria" class="logo-inria">
+          </a>
+      </div>
+  
+      <img src="images/SIG_Logo_IPHD_Concours_Innovations_RVB.png" alt="Secondary logo" class="logo-secondary">
+    </div>
+  
     <nav>
       <ul class="tabs">
         <li data-tab="home" class="active">Home</li>
         <li data-tab="news">News</li>
-        <li data-tab="blogs">Blogs</li>
+        <!-- <li data-tab="blogs">Blogs</li> -->
         <li data-tab="contact">Contact</li>
       </ul>
     </nav>
   </header>
+  
 
   <main>
     <section id="home" class="tab-content active">
-      <h2>Home</h2>
-      <p>We simulate a real cellular environment by explaining protein interaction networks</p>
+
+      <h1 class="hero-title">
+        We simulate <span class="highlight"><i>a real cellular environment</i></span><br>
+        by explaining protein interaction networks.
+      </h1>
+    
+      <div class="home-columns">
+        <div class="home-column left">
+          <p>
+            Computational predictions are just ideas until they are validated experimentally in a real cellular environment. 
+            LabSae captures the essence of biological systems and advances in-silico drug development by in-depth analysis of proteins and their interaction networks!
+          </p>
+          <img src="images/GDL_edited.png" alt="Protein GDL">
+        </div>
+    
+        <div class="home-column right">
+          <p>
+            LabSae allows biopharma companies to identify targets, map signaling pathways, and explore the therapeutic agents' impact on biological systems. 
+            It predicts protein-protein and protein-drug interactions and highlights potential interaction sites, including hotspots and pockets.
+          </p>
+          <img src="images/VEGF_VEGFR_SRC_network.png" alt="VEGF Network analysis">
+        </div>
+      </div>
+    
+      <section class="home-single-column">
+
+        <!-- Supported by -->
+        <h3>We are supported by</h3>
+        <div class="logo-row">
+          <img src="images/Logo_Bpifrance_edited.png" alt="Logo 1">
+          <img src="images/Logo-Inria-rouge.png" alt="Logo 2">
+          <img src="images/ISS-fond-video.jpg" alt="Logo 3">
+          <img src="images/info-ASU_edited_edited.jpg" alt="Logo 4">
+          <img src="images/Logo PUI ASU-myStartup Program.JPG" alt="Logo 5">
+        </div>
+      
+        <!-- Scientific reviewers -->
+        <h3>We are scientific reviewers for</h3>
+        <div class="logo-row">
+          <img src="images/ISCB-logo-v2-01.jpg" alt="Reviewer 1">
+          <img src="images/iscb_2024.png" alt="Reviewer 2">
+          <img src="images/neurips2022_edited.jpg" alt="Reviewer 3">
+          <img src="images/Oxford_University_Press_logo_edited.jpg" alt="Reviewer 4">
+        </div>
+      
+        <!-- Paragraphs -->
+        <div class="home-text">
+          <p>
+            The in-silico pre-clinical development acts as the foundation for therapeutic discovery. 
+            Despite its importance, it often oversimplifies biological processes and suffers from various challenges, such as low predictive accuracy, small-scale analysis, and reliance on reference biological data. This creates a vicious try-and-error cycle between the pre-clinical and clinical phases to find suitable pharmaceutical interventions.
+          </p>
+          <p>
+            This problem stems from our very limited understanding of biological systems, which are primarily governed by proteins and their interactions. Large-scale computational approaches can address this problem and will enable us to dramatically improve our knowledge on proteins.
+          </p>
+          <p>
+            LabSae provides a holistic analysis of biological systems at molecular resolution.
+          </p>
+          <img src="images/AddedValue.png" alt="Added value" class="home-single-image">
+        </div>
+      </section>
+      
     </section>
+    
 
     <section id="news" class="tab-content">
       <h2>News</h2>
@@ -32,15 +105,181 @@
 
     <section id="blogs" class="tab-content">
       <h2>Blogs</h2>
-      <p></p>
+    
+      <!-- Blog list (cards) -->
+      <div id="blog-list" class="blog-grid"></div>
+    
+      <!-- Full article view -->
+      <div id="blog-article" style="display:none;"></div>
     </section>
+    
+    
 
     <section id="contact" class="tab-content">
-      <h2>Contact</h2>
-      <p></p>
+      <div class="contact-wrapper">
+        <h2>Contact us</h2>
+        <p class="contact-subtitle">
+          Would you like a demo or start a collaboration? Contact us!
+        </p>
+    
+        <form
+          class="contact-form"
+          action="https://formspree.io/f/xojqvddg"
+          method="POST"
+        >
+          <div class="contact-row">
+            <input type="text" name="first_name" placeholder="First name" required>
+            <input type="text" name="last_name" placeholder="Family name" required>
+            <input type="email" name="email" placeholder="E-mail" required>
+          </div>
+    
+          <textarea name="message" placeholder="Message" required></textarea>
+    
+          <div class="contact-actions">
+            <button type="submit">Send</button>
+          </div>
+    
+          <p class="contact-legal">
+            By clicking on “Send”, you authorize LabSae to store and process the personal
+            data submitted here. You confirm that you have read the
+            <a href="#" data-open="privacy">Privacy Policy</a> and
+            <a href="#" data-open="terms">Terms and Conditions</a>.
+          </p>
+        </form>
+      </div>
     </section>
+    <section id="privacy" class="tab-content">
+      <h2>Privacy Policy</h2>
+    
+      <p>
+        LabSae is committed to protecting your privacy. This Privacy Policy explains
+        how we collect, use, and protect any information you provide through our
+        website, located in Paris, France.
+      </p>
+    
+      <h3>1. Information We Collect</h3>
+      <p>
+        When you use the contact form on our website, we may collect the following
+        personal information:
+      </p>
+      <ul>
+        <li>Name</li>
+        <li>Email address</li>
+        <li>Any additional information you include in your message</li>
+      </ul>
+    
+      <h3>2. How We Use Your Information</h3>
+      <p>We use the information you provide to:</p>
+      <ul>
+        <li>Respond to your inquiries or messages</li>
+        <li>Improve our services and website content</li>
+      </ul>
+      <p>
+        We will never sell, rent, or share your information with third parties unless
+        required by law.
+      </p>
+    
+      <h3>3. Data Retention</h3>
+      <p>
+        We retain your information only for as long as necessary to fulfill the
+        purposes outlined in this policy or as required by law.
+      </p>
+    
+      <h3>4. Security</h3>
+      <p>
+        We take appropriate technical and organizational measures to protect your
+        personal information. However, no method of transmission over the Internet is
+        100% secure.
+      </p>
+    
+      <h3>5. Your Rights</h3>
+      <p>You have the right to:</p>
+      <ul>
+        <li>Access the personal data we hold about you</li>
+        <li>Request corrections to your data</li>
+        <li>Request the deletion of your data</li>
+      </ul>
+      <p>
+        To exercise these rights, please contact:
+        <br>
+        <strong>laurent [dot] david [at] inria [dot] fr</strong>
+      </p>
+    
+      <h3>6. Third-Party Services</h3>
+      <p>
+        Our website uses third-party services (e.g. form providers) that may collect
+        technical information such as IP addresses. Please refer to their respective
+        privacy policies for more details.
+      </p>
+    
+      <h3>7. Updates to This Policy</h3>
+      <p>
+        We reserve the right to update this Privacy Policy at any time. Changes will
+        be posted on this page.
+      </p>
+    
+      <h3>8. Contact Us</h3>
+      <p>
+        If you have any questions regarding this policy, contact us at:
+        <br>
+        <strong>laurent [dot] david [at] inria [dot] fr</strong>
+      </p>
+    </section>
+    <section id="terms" class="tab-content">
+      <h2>Terms and Conditions</h2>
+    
+      <p>
+        Welcome to LabSae!
+      </p>
+    
+      <p>
+        These Terms and Conditions govern your use of our website, located in Paris,
+        France. By accessing this website, you agree to comply with these terms. If
+        you do not agree, please refrain from using the website.
+      </p>
+    
+      <h3>1. Information Purposes Only</h3>
+      <p>
+        The content provided on this website is for informational purposes only. It
+        is intended to share details about LabSae and our ongoing projects.
+      </p>
+    
+      <h3>2. Intellectual Property</h3>
+      <p>
+        All content on this website, including text, images, graphics, logos, and
+        other materials, is the property of LabSae and is protected by copyright
+        laws. You may not reproduce, distribute, or modify any content without prior
+        written consent from LabSae.
+      </p>
+    
+      <h3>3. Contact Form</h3>
+      <p>
+        If you choose to contact us using the contact form, we may collect and
+        process the information you provide to respond to your inquiry. For more
+        details, please refer to our Privacy Policy.
+      </p>
+    
+      <h3>4. Changes to These Terms</h3>
+      <p>
+        LabSae reserves the right to update or modify these Terms and Conditions at
+        any time without prior notice. Please check this page periodically to stay
+        informed about any changes.
+      </p>
+    
+      <h3>5. Questions or Concerns</h3>
+      <p>
+        If you have any questions about these Terms and Conditions, feel free to
+        contact us at:
+        <br>
+        <strong>laurent [dot] david [at] inria [dot] fr</strong>
+      </p>
+    </section>
+    
+    
   </main>
 
-  <script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="blogs/blogindex.js"></script>
+<script src="script.js">  </script>
 </body>
 </html>
